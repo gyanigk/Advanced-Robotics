@@ -1,0 +1,4 @@
+string msg_input
+---
+string msg_output
+float64 time_taken
