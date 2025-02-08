@@ -1,4 +1,0 @@
-string request
----
-string response
-float64 time_taken

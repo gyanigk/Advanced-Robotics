@@ -4,16 +4,11 @@
   <name>gyku8294_hw2</name>
   <version>0.0.0</version>
   <description>TODO: Package description</description>
-  <maintainer email="gyanig_ros2@todo.todo">gyanig_ros2</maintainer>
-  <license>Apache-2.0</license>
-  <!-- <buildtool_depend>ament_python</buildtool_depend> -->
+  <maintainer email="gyanig.kumar@gmail.com">gyanig_ros2</maintainer>
+  <license>TODO: License declaration</license>
 
-  <!-- <depend>rclpy</depend>
-  <depend>gyku8294_service</depend> -->
-  <buildtool_depend>ament_python</buildtool_depend>
-  <depend>gyku8294service</depend>
-
-  <exec_depend>rclpy</exec_depend>
+  <depend>rclpy</depend>
+  <depend>gyku8294_service</depend>
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
