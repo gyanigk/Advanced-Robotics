@@ -25,6 +25,10 @@ class LatencySubscriber(Node):
 
     def generate_histogram(self):
         plt.hist(self.latencies, bins=30, alpha=0.75, color='red', edgecolor='black')
+        plt.ylim(0, 370)  # Set y-axis limits
+        plt.xlim(0, 0.0016)
+
+        # plt.xlim(0,400)
         plt.xlabel("Latency (s)")
         plt.ylabel("Frequency")
         plt.title("ROS 2 Topic Latencies")

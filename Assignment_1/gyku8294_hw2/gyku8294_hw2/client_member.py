@@ -48,13 +48,14 @@ def main():
     # plt.savefig('service_latency_histogram.png')
     # plt.show()
     # minimal_client.get_logger().info('Histogram_generated!')
-
+    
     # Create a larger figure
     plt.figure(figsize=(10, 6))
 
     # Plot histogram with improved styling
     plt.hist(service_latencies, bins=30, edgecolor='black', alpha=0.75, linewidth=1.2)
-
+    plt.ylim(0, 370)  # Set y-axis limits
+    plt.xlim(0, 0.0016)
     # Labels and title with enhanced font sizes
     plt.xlabel('Latency (s)', fontsize=14)
     plt.ylabel('Frequency', fontsize=14)
