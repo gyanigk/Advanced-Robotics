@@ -1,0 +1,230 @@
+> python continuous_solution.py
+Testing Mountain Car with different policy computation methods and bin sizes...
+
+=== Testing with 31 bins ===
+
+--- Testing Value Iteration ---
+Goal state 914, Action 0, Next 914: Reward 0.0
+Goal state 914, Action 1, Next 914: Reward 0.0
+Goal state 914, Action 2, Next 914: Reward 0.0
+VI Iteration 0, diff 1.000000, elapsed 0.109, performance -200.00
+VI Iteration 1, diff 0.950000, elapsed 0.104, performance -200.00
+VI Iteration 2, diff 0.902500, elapsed 0.102, performance -200.00
+VI Iteration 3, diff 0.857375, elapsed 0.102, performance -200.00
+VI Iteration 4, diff 0.814506, elapsed 0.101, performance -200.00
+VI Iteration 5, diff 0.773781, elapsed 0.101, performance -200.00
+VI Iteration 6, diff 0.735092, elapsed 0.102, performance -200.00
+VI Iteration 7, diff 0.698337, elapsed 0.109, performance -200.00
+VI Iteration 8, diff 0.663420, elapsed 0.104, performance -200.00
+VI Iteration 9, diff 0.630249, elapsed 0.103, performance -196.87
+VI Iteration 10, diff 0.598737, elapsed 0.105, performance -200.00
+VI Iteration 11, diff 0.568800, elapsed 0.105, performance -200.00
+VI Iteration 12, diff 0.540360, elapsed 0.103, performance -200.00
+VI Iteration 13, diff 0.513342, elapsed 0.103, performance -200.00
+VI Iteration 14, diff 0.487675, elapsed 0.100, performance -196.73
+VI Iteration 15, diff 0.463291, elapsed 0.101, performance -196.73
+VI Iteration 16, diff 0.440127, elapsed 0.103, performance -196.47
+VI Iteration 17, diff 0.418120, elapsed 0.104, performance -200.00
+VI Iteration 18, diff 0.397214, elapsed 0.102, performance -197.47
+VI Iteration 19, diff 0.377354, elapsed 0.102, performance -196.40
+VI Iteration 20, diff 0.268864, elapsed 0.102, performance -196.40
+VI Iteration 21, diff 0.000000, elapsed 0.104, performance -200.00
+Computed Value Iteration Policy in 2.27 seconds
+
+--- Testing Policy Iteration ---
+Goal state 914, Action 0, Next 914: Reward 0.0
+Goal state 914, Action 1, Next 914: Reward 0.0
+Goal state 914, Action 2, Next 914: Reward 0.0
+Deterministic PI Iteration 0, elapsed 0.254, performance -200.00
+Deterministic PI Iteration 1, elapsed 0.230, performance -200.00
+Deterministic PI Iteration 2, elapsed 0.213, performance -188.20
+Deterministic PI Iteration 3, elapsed 0.131, performance -172.27
+Deterministic PI Iteration 4, elapsed 0.133, performance -196.67
+Deterministic PI Iteration 5, elapsed 0.136, performance -196.47
+Deterministic PI Iteration 6, elapsed 0.151, performance -200.00
+Deterministic PI Iteration 7, elapsed 0.137, performance -200.00
+Deterministic PI Iteration 8, elapsed 0.129, performance -200.00
+Deterministic PI Iteration 9, elapsed 0.125, performance -200.00
+Deterministic PI Iteration 10, elapsed 0.121, performance -196.40
+Deterministic PI Iteration 11, elapsed 0.120, performance -196.40
+Deterministic PI Iteration 12, elapsed 0.123, performance -200.00
+Deterministic PI Iteration 13, elapsed 0.123, performance -200.00
+Deterministic PI Iteration 14, elapsed 0.123, performance -200.00
+Value function size: 961, Expected: 961
+Final policy performance: Reward of -200.00 after 200.0 steps.
+Computed Policy Iteration Policy in 2.26 seconds
+
+--- Testing Stochastic PI ---
+Goal state 914, Action 0, Next 914: Reward 0.0
+Goal state 914, Action 1, Next 914: Reward 0.0
+Goal state 914, Action 2, Next 914: Reward 0.0
+Solver num_states: 961, num_actions: 3
+Expected 2D states (num_bins^2): 961
+Stochastic PI Iteration 0, policy_diff 2668.352731, elapsed 1.313, performance -199.47
+Stochastic PI Iteration 1, policy_diff 952.721294, elapsed 1.285, performance -165.53
+Stochastic PI Iteration 2, policy_diff 247.687902, elapsed 1.275, performance -176.00
+Stochastic PI Iteration 3, policy_diff 71.566035, elapsed 0.391, performance -182.73
+Stochastic PI Iteration 4, policy_diff 24.726395, elapsed 0.271, performance -184.00
+Stochastic PI Iteration 5, policy_diff 7.456661, elapsed 0.233, performance -185.53
+Stochastic PI Iteration 6, policy_diff 0.579538, elapsed 0.218, performance -176.47
+Stochastic PI Iteration 7, policy_diff 0.003553, elapsed 0.206, performance -182.47
+Stochastic PI Iteration 8, policy_diff 0.000010, elapsed 0.189, performance -181.53
+Computed Stochastic PI Policy in 5.45 seconds
+
+=== Testing with 51 bins ===
+
+--- Testing Value Iteration ---
+Goal state 2473, Action 0, Next 2473: Reward 0.0
+Goal state 2473, Action 1, Next 2473: Reward 0.0
+Goal state 2473, Action 2, Next 2473: Reward 0.0
+VI Iteration 0, diff 1.000000, elapsed 0.184, performance -200.00
+VI Iteration 1, diff 0.950000, elapsed 0.148, performance -200.00
+VI Iteration 2, diff 0.902500, elapsed 0.146, performance -200.00
+VI Iteration 3, diff 0.857375, elapsed 0.147, performance -200.00
+VI Iteration 4, diff 0.814506, elapsed 0.145, performance -200.00
+VI Iteration 5, diff 0.773781, elapsed 0.144, performance -200.00
+VI Iteration 6, diff 0.735092, elapsed 0.145, performance -200.00
+VI Iteration 7, diff 0.698337, elapsed 0.145, performance -200.00
+VI Iteration 8, diff 0.663420, elapsed 0.141, performance -193.33
+VI Iteration 9, diff 0.630249, elapsed 0.141, performance -190.33
+VI Iteration 10, diff 0.598737, elapsed 0.146, performance -200.00
+VI Iteration 11, diff 0.568800, elapsed 0.144, performance -200.00
+VI Iteration 12, diff 0.540360, elapsed 0.154, performance -200.00
+VI Iteration 13, diff 0.513342, elapsed 0.149, performance -200.00
+VI Iteration 14, diff 0.487675, elapsed 0.146, performance -200.00
+VI Iteration 15, diff 0.463291, elapsed 0.141, performance -192.73
+VI Iteration 16, diff 0.440127, elapsed 0.145, performance -200.00
+VI Iteration 17, diff 0.418120, elapsed 0.143, performance -196.40
+VI Iteration 18, diff 0.397214, elapsed 0.134, performance -177.80
+VI Iteration 19, diff 0.377354, elapsed 0.131, performance -172.20
+VI Iteration 20, diff 0.358486, elapsed 0.139, performance -185.73
+VI Iteration 21, diff 0.255421, elapsed 0.145, performance -189.33
+VI Iteration 22, diff 0.000000, elapsed 0.149, performance -185.87
+Computed Value Iteration Policy in 3.35 seconds
+
+--- Testing Policy Iteration ---
+Goal state 2473, Action 0, Next 2473: Reward 0.0
+Goal state 2473, Action 1, Next 2473: Reward 0.0
+Goal state 2473, Action 2, Next 2473: Reward 0.0
+Deterministic PI Iteration 0, elapsed 1.986, performance -200.00
+Deterministic PI Iteration 1, elapsed 1.903, performance -200.00
+Deterministic PI Iteration 2, elapsed 1.870, performance -200.00
+Deterministic PI Iteration 3, elapsed 0.666, performance -200.00
+Deterministic PI Iteration 4, elapsed 0.531, performance -200.00
+Deterministic PI Iteration 5, elapsed 0.473, performance -200.00
+Deterministic PI Iteration 6, elapsed 0.452, performance -200.00
+Deterministic PI Iteration 7, elapsed 0.452, performance -196.47
+Deterministic PI Iteration 8, elapsed 0.433, performance -196.40
+Deterministic PI Iteration 9, elapsed 0.328, performance -175.07
+Deterministic PI Iteration 10, elapsed 0.267, performance -154.87
+Deterministic PI Iteration 11, elapsed 0.247, performance -187.07
+Deterministic PI Iteration 12, elapsed 0.296, performance -193.07
+Deterministic PI Iteration 13, elapsed 0.279, performance -189.40
+Deterministic PI Iteration 14, elapsed 0.241, performance -182.33
+Deterministic PI Iteration 15, elapsed 0.239, performance -178.80
+Deterministic PI Iteration 16, elapsed 0.244, performance -189.47
+Value function size: 2601, Expected: 2601
+Final policy performance: Reward of -147.00 after 148.0 steps.
+Computed Policy Iteration Policy in 10.91 seconds
+
+--- Testing Stochastic PI ---
+Goal state 2473, Action 0, Next 2473: Reward 0.0
+Goal state 2473, Action 1, Next 2473: Reward 0.0
+Goal state 2473, Action 2, Next 2473: Reward 0.0
+Solver num_states: 2601, num_actions: 3
+Expected 2D states (num_bins^2): 2601
+Stochastic PI Iteration 0, policy_diff 6625.691739, elapsed 4.380, performance -198.93
+Stochastic PI Iteration 1, policy_diff 2484.843074, elapsed 4.273, performance -124.60
+Stochastic PI Iteration 2, policy_diff 683.936435, elapsed 4.187, performance -164.73
+Stochastic PI Iteration 3, policy_diff 173.075650, elapsed 1.095, performance -177.73
+Stochastic PI Iteration 4, policy_diff 34.600055, elapsed 0.755, performance -192.27
+Stochastic PI Iteration 5, policy_diff 7.956519, elapsed 0.605, performance -187.67
+Stochastic PI Iteration 6, policy_diff 1.419545, elapsed 0.601, performance -191.33
+Stochastic PI Iteration 7, policy_diff 0.076117, elapsed 0.565, performance -184.67
+Stochastic PI Iteration 8, policy_diff 0.001503, elapsed 0.519, performance -175.73
+Stochastic PI Iteration 9, policy_diff 0.000021, elapsed 0.407, performance -181.47
+Computed Stochastic PI Policy in 17.64 seconds
+
+=== Testing with 101 bins ===
+
+--- Testing Value Iteration ---
+Goal state 9645, Action 0, Next 9644: Reward 0.0
+Goal state 9645, Action 1, Next 9645: Reward 0.0
+Goal state 9645, Action 2, Next 9646: Reward 0.0
+VI Iteration 0, diff 1.000000, elapsed 1.323, performance -200.00
+VI Iteration 1, diff 0.950000, elapsed 0.662, performance -200.00
+VI Iteration 2, diff 0.902500, elapsed 0.673, performance -200.00
+VI Iteration 3, diff 0.857375, elapsed 0.662, performance -200.00
+VI Iteration 4, diff 0.814506, elapsed 0.664, performance -200.00
+VI Iteration 5, diff 0.773781, elapsed 0.662, performance -200.00
+VI Iteration 6, diff 0.735092, elapsed 0.662, performance -200.00
+VI Iteration 7, diff 0.698337, elapsed 0.662, performance -200.00
+VI Iteration 8, diff 0.663420, elapsed 0.662, performance -192.47
+VI Iteration 9, diff 0.630249, elapsed 0.646, performance -161.47
+VI Iteration 10, diff 0.598737, elapsed 0.632, performance -135.87
+VI Iteration 11, diff 0.568800, elapsed 0.647, performance -169.47
+VI Iteration 12, diff 0.540360, elapsed 0.653, performance -171.33
+VI Iteration 13, diff 0.513342, elapsed 0.651, performance -174.27
+VI Iteration 14, diff 0.487675, elapsed 0.650, performance -161.67
+VI Iteration 15, diff 0.463291, elapsed 0.652, performance -163.60
+VI Iteration 16, diff 0.440127, elapsed 0.650, performance -173.40
+VI Iteration 17, diff 0.418120, elapsed 0.645, performance -158.67
+VI Iteration 18, diff 0.397214, elapsed 0.708, performance -159.67
+VI Iteration 19, diff 0.377354, elapsed 0.635, performance -122.80
+VI Iteration 20, diff 0.358486, elapsed 0.637, performance -107.93
+VI Iteration 21, diff 0.340562, elapsed 0.624, performance -107.00
+VI Iteration 22, diff 0.000000, elapsed 0.620, performance -104.60
+Computed Value Iteration Policy in 15.68 seconds
+
+--- Testing Policy Iteration ---
+Goal state 9645, Action 0, Next 9644: Reward 0.0
+Goal state 9645, Action 1, Next 9645: Reward 0.0
+Goal state 9645, Action 2, Next 9646: Reward 0.0
+Deterministic PI Iteration 0, elapsed 24.025, performance -200.00
+Deterministic PI Iteration 1, elapsed 23.389, performance -191.07
+Deterministic PI Iteration 2, elapsed 22.088, performance -156.67
+Deterministic PI Iteration 3, elapsed 7.545, performance -159.80
+Deterministic PI Iteration 4, elapsed 6.259, performance -153.93
+Deterministic PI Iteration 5, elapsed 5.318, performance -136.07
+Deterministic PI Iteration 6, elapsed 5.142, performance -151.80
+Deterministic PI Iteration 7, elapsed 4.236, performance -161.93
+Deterministic PI Iteration 8, elapsed 3.368, performance -160.33
+Deterministic PI Iteration 9, elapsed 2.887, performance -105.53
+Value function size: 10201, Expected: 10201
+Final policy performance: Reward of -109.00 after 110.0 steps.
+Computed Policy Iteration Policy in 104.27 seconds
+
+--- Testing Stochastic PI ---
+Goal state 9645, Action 0, Next 9644: Reward 0.0
+Goal state 9645, Action 1, Next 9645: Reward 0.0
+Goal state 9645, Action 2, Next 9646: Reward 0.0
+Solver num_states: 10201, num_actions: 3
+Expected 2D states (num_bins^2): 10201
+Stochastic PI Iteration 0, policy_diff 27059.896634, elapsed 32.651, performance -199.67
+Stochastic PI Iteration 1, policy_diff 9903.712616, elapsed 22.070, performance -125.20
+Stochastic PI Iteration 2, policy_diff 2482.523631, elapsed 6.616, performance -116.80
+Stochastic PI Iteration 3, policy_diff 573.007246, elapsed 6.427, performance -110.00
+Stochastic PI Iteration 4, policy_diff 188.188927, elapsed 5.676, performance -107.87
+Stochastic PI Iteration 5, policy_diff 101.400581, elapsed 4.944, performance -107.67
+Stochastic PI Iteration 6, policy_diff 51.326600, elapsed 4.619, performance -111.13
+Stochastic PI Iteration 7, policy_diff 18.162803, elapsed 4.386, performance -104.80
+Stochastic PI Iteration 8, policy_diff 1.340559, elapsed 3.944, performance -109.07
+Stochastic PI Iteration 9, policy_diff 0.053995, elapsed 3.636, performance -108.73
+Stochastic PI Iteration 10, policy_diff 0.000886, elapsed 3.299, performance -113.40
+Stochastic PI Iteration 11, policy_diff 0.000012, elapsed 2.720, performance -113.93
+Computed Stochastic PI Policy in 103.02 seconds
+
+=== Final Performance Comparison ===
+
+Bin Size | Algorithm | Temperature | Performance
+--------------------------------------------------
+101      | Policy Iteration | N/A        |     -157.71
+31       | Policy Iteration | N/A        |     -198.93
+51       | Policy Iteration | N/A        |     -184.29
+101      | Stochastic PI   | 0.1        |     -110.34
+31       | Stochastic PI   | 0.1        |     -181.53
+51       | Stochastic PI   | 0.1        |     -177.91
+101      | Value Iteration | N/A        |     -143.36
+31       | Value Iteration | N/A        |     -198.02
+51       | Value Iteration | N/A        |     -190.01
+> 
