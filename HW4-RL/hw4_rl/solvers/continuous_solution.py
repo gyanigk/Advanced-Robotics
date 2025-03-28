@@ -357,24 +357,26 @@ class DiscretizedSolver:
             # Student code here
             # Sample random actions and observe next states and rewards
             # Append to lists
-            reward_sum = 0
+            reward_summed = 0
+            # idea is to sample n_samples times and average the rewards and transitions
             for t in range(n_samples):
                 next_state, reward, terminated, truncated, _ = self.env.step(action_idx)
                 # next_states_list.append(next_state)
                 # rewards_list.append(reward)
-                reward_sum +=  reward
+                reward_summed +=  reward
                 if terminated:
                     break
                 
             # next_state, reward, terminated, truncated, _ = self.env.step(action_idx)
             next_states_list.append(next_state)
-            rewards_list.append(reward_sum/(t+1))
+            rewards_list.append(reward_summed/(t+1))
 
         # Average the transitions and rewards
         for i in range(n_samples):
             next_states = self.get_discrete_state_probabilities(next_states_list[i])
             reward = rewards_list[i]
-
+            # Remove duplicates and combine weights
+            # Iterate through next states and update transition probabilities and rewards only
             for next_state, prob in next_states:
                 # Update transition probability
                 current_prob = self.solver.get_transition(
@@ -382,6 +384,7 @@ class DiscretizedSolver:
                 )
                 new_prob = (current_prob * (i) + prob) / (i + 1) if i > 0 else prob
                 self.solver.set_transition(state_idx, action_idx, next_state, new_prob)
+                
                 # Update the reward and transition probability
                 current_reward = self.solver.get_reward(state_idx, action_idx, next_state)
                 new_reward = (current_reward * (i) + reward) / (i + 1) if i > 0 else reward
@@ -475,6 +478,8 @@ class DiscretizedSolver:
             # weights = inv_distances / np.sum(inv_distances)
             # return list(zip(state_indices, weights))
             # Find valid neighbors within bounds
+            
+            # tried to use normalization directly on the coordinates, but it was not working
             valid_mask = np.all((neighbor_coords >= self.state_lower_bound) & 
                             (neighbor_coords < self.state_upper_bound), axis=1)
             valid_coords = neighbor_coords[valid_mask]
@@ -568,6 +573,7 @@ class DiscretizedSolver:
             value_function = new_values
             best_action = np.argmax(Q, axis = 1)
             policy = np.zeros((self.solver.num_states, self.solver.num_actions))
+            # Update policy deterministicly only based on states
             for state in range(self.solver.num_states):
                 # action_values = np.sum(self.solver._transition_function[s] * (self.solver._reward_function[s] + self.gamma * value_function[np.newaxis, np.newaxis, :]), axis=1)
                 # policy[s] = 0.0
@@ -668,6 +674,7 @@ class DiscretizedSolver:
                 
                 if delta < eps_value:
                     break
+                # directly using the policy to update the value function did not work
                 # value_function = policy_R + self.gamma * policy_T.dot(value_function)
 
             # Policy improvement

@@ -2,6 +2,19 @@
 
 This package implements various reinforcement learning algorithms for solving gridworld and mountain car problems using tabular methods.
 
+## Important note
+- I have tried to fix the performance=-200 problem with updating the envs/gym_mountaincar/envs/mountain_car.py file with a updating the reward function there. 
+- All the output results from the training can be found in output_nn.txt and output_linear.txt
+
+
+## Writeup
+All versions of the writeup can be found in the writeups folder. The final version is saved as final_writeup.pdf like this readme.md
+
+## Figures
+
+All figures are generated and could be found inside the hw4_rl/figures/<gridworld,mountaincar,mountaincar_linear>
+
+
 ## Installation
 
 You can install the package directly from the source:

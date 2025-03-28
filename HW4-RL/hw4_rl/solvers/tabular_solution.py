@@ -651,6 +651,7 @@ class GridworldSolver:
                         Q_sa = np.sum(T[s,a, :]*(R[s,a, :] + self.gamma * v_i))
                         state_val += p_i[s,a] * Q_sa
                     new_v[s] = state_val
+                    print(state_val,"checking updates")
                 v_i = new_v
                 
                 
@@ -667,9 +668,11 @@ class GridworldSolver:
                     Q_sa[a] = np.sum(
                         T[s, a, :] * (R[s, a, :] + self.gamma * v_i)
                     )
+                    # print("Q_sa : ",Q_sa,"checking Q values")
                 max_Q = np.max(Q_sa)
                 exp_Q = np.exp((Q_sa - max_Q) * temp_reciprocal)
-                p_i[s, :] = exp_Q / np.sum(exp_Q)
+                p_i[s, :] = exp_Q / np.sum(exp_Q) # Softmax policy
+                # print("p_i : ",p_i[s,:],"checking policy updates")                
                 
             
             
@@ -754,6 +757,9 @@ class GridworldSolver:
                 # Get expected value for current policy
                 # Student code here
                 # pass  # Placeholder for student implementation
+                
+                #running the iterations for the value function
+                # print("v_i : ",v_i,"checking value function updates")
                 new_v = np.zeros(unwrapped_env.num_states)
                 for s in range(unwrapped_env.num_states):
                     a_star = np.argmax(p_i[s])
