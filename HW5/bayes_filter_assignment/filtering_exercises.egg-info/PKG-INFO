@@ -1,4 +1,4 @@
-Metadata-Version: 2.1
+Metadata-Version: 2.4
 Name: filtering_exercises
 Version: 0.1.0
 Summary: Filtering exercises for robotics, split into three assignments: Bayes Filter, Extended Kalman Filter, and Particle Filter
@@ -38,6 +38,16 @@ Requires-Dist: black>=21.0.0; extra == "dev"
 Requires-Dist: flake8>=3.9.0; extra == "dev"
 Requires-Dist: sphinx>=4.0.0; extra == "dev"
 Requires-Dist: jupyter>=1.0.0; extra == "dev"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
 
 # Filtering Exercises for Robotics
 

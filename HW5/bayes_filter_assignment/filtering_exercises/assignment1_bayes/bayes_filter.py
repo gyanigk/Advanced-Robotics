@@ -88,16 +88,27 @@ class BayesFilter:
                     if action == 0:
                         valid_move = False  # Flag to check if any valid move is possible to only update the belief then
                         # For each possible heading
-                        for heading in range(4):
+                        directions = [(0, 1), (-1, 0), (0, -1), (1, 0)]  # right, up, left, down
+                        for dx,dy in directions:
                             # Calculate next position based on heading
-                            if heading == 0:
-                                next_pos = (i, j + 1)
-                            elif heading == 1:
-                                next_pos = (i - 1, j)
-                            elif heading == 2:
-                                next_pos = (i, j - 1)
-                            else:
-                                next_pos = (i + 1, j)
+                            next_pos = (i + dx, j + dy)
+                            # # Check if move is valid
+                            # if (
+                            #     0 <= next_pos[0] < self.grid_size[0]
+                            #     and 0 <= next_pos[1] < self.grid_size[1]
+                            #     and self.env.grid[next_pos] == 0
+                            # ):
+                            #     valid_move = True
+                            # for heading in range(4):
+                            #     # Calculate next position based on heading
+                            #     if heading == 0:
+                            #         next_pos = (i, j + 1)
+                            #     elif heading == 1:
+                            #         next_pos = (i - 1, j)
+                            #     elif heading == 2:
+                            #         next_pos = (i, j - 1)
+                            #     else:
+                            #         next_pos = (i + 1, j)
                             # Check if move is valid
                             if (
                                 0 <= next_pos[0] < self.grid_size[0]
@@ -109,14 +120,13 @@ class BayesFilter:
                                 new_belief[next_pos] += (
                                     (1 - self.motion_noise) * self.belief[i, j] / 4
                                 )
+                            if valid_move:
                                 # Add probability of failed move to current position
                                 new_belief[i, j] += (
                                     self.motion_noise * self.belief[i, j] / 4
                                 )
-                            if valid_move==False:
+                            else:
                                 new_belief[i, j] += self.belief[i,j]
-                                
-
                     # If action is turn
                     else:
                         # Simply copy current belief (no position change)
