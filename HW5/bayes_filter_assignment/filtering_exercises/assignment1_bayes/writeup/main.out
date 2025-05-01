@@ -1,0 +1,20 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{Environment Description}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Grid World}{section.2}% 3
+\BOOKMARK [1][-]{section.3}{Motion Model}{}% 4
+\BOOKMARK [2][-]{subsection.3.1}{Action Space}{section.3}% 5
+\BOOKMARK [2][-]{subsection.3.2}{Motion Uncertainty}{section.3}% 6
+\BOOKMARK [2][-]{subsection.3.3}{Motion Model Equations}{section.3}% 7
+\BOOKMARK [1][-]{section.4}{Measurement Model}{}% 8
+\BOOKMARK [2][-]{subsection.4.1}{Sensor Configuration}{section.4}% 9
+\BOOKMARK [2][-]{subsection.4.2}{Measurement Process}{section.4}% 10
+\BOOKMARK [2][-]{subsection.4.3}{Measurement Model Equations}{section.4}% 11
+\BOOKMARK [1][-]{section.5}{Implementation Tasks}{}% 12
+\BOOKMARK [2][-]{subsection.5.1}{Prediction Step}{section.5}% 13
+\BOOKMARK [2][-]{subsection.5.2}{Update Step }{section.5}% 14
+\BOOKMARK [2][-]{subsection.5.3}{Analysis and Visualization }{section.5}% 15
+\BOOKMARK [1][-]{section.6}{Getting Started}{}% 16
+\BOOKMARK [2][-]{subsection.6.1}{Installation}{section.6}% 17
+\BOOKMARK [2][-]{subsection.6.2}{Code Structure}{section.6}% 18
+\BOOKMARK [2][-]{subsection.6.3}{Testing}{section.6}% 19
+\BOOKMARK [1][-]{section.7}{Submission Instructions}{}% 20

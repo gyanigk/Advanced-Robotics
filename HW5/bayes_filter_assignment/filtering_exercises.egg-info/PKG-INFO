@@ -1,0 +1,164 @@
+Metadata-Version: 2.4
+Name: filtering_exercises
+Version: 0.1.0
+Summary: Filtering exercises for robotics, split into three assignments: Bayes Filter, Extended Kalman Filter, and Particle Filter
+Home-page: https://github.com/yourusername/filtering_exercises
+Author: Brendan
+Author-email: your.email@example.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Education
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Robotics
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=1.21.0
+Requires-Dist: scipy>=1.7.0
+Requires-Dist: matplotlib>=3.4.0
+Provides-Extra: assignment1
+Requires-Dist: pytest>=6.0.0; extra == "assignment1"
+Requires-Dist: jupyter>=1.0.0; extra == "assignment1"
+Provides-Extra: assignment2
+Requires-Dist: pytest>=6.0.0; extra == "assignment2"
+Requires-Dist: jupyter>=1.0.0; extra == "assignment2"
+Requires-Dist: scipy>=1.7.0; extra == "assignment2"
+Provides-Extra: assignment3
+Requires-Dist: pytest>=6.0.0; extra == "assignment3"
+Requires-Dist: jupyter>=1.0.0; extra == "assignment3"
+Requires-Dist: scipy>=1.7.0; extra == "assignment3"
+Provides-Extra: dev
+Requires-Dist: pytest>=6.0.0; extra == "dev"
+Requires-Dist: black>=21.0.0; extra == "dev"
+Requires-Dist: flake8>=3.9.0; extra == "dev"
+Requires-Dist: sphinx>=4.0.0; extra == "dev"
+Requires-Dist: jupyter>=1.0.0; extra == "dev"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Filtering Exercises for Robotics
+
+This repository contains three assignments focused on implementing various filtering algorithms for robot localization. Each assignment builds upon the previous one, introducing increasingly sophisticated approaches to state estimation.
+
+## Assignments Overview
+
+### Assignment 1: Discrete Bayes Filter
+- Implementation of a basic Bayes filter for discrete state estimation
+- Grid world environment with discrete states
+- Forward movements and turns
+- Beam sensor measurements
+- Directory: `filtering_exercises/assignment1_bayes/`
+
+### Assignment 2: Extended Kalman Filter
+- Implementation of EKF for continuous state estimation
+- Continuous world environment
+- Nonlinear motion and measurement models
+- Range-bearing measurements to landmarks
+- Directory: `filtering_exercises/assignment2_ekf/`
+
+### Assignment 3: Particle Filter
+- Implementation of particle filter for non-Gaussian estimation
+- Multimodal world environment
+- Complex dynamics and noise models
+- Weighted particle representation
+- Directory: `filtering_exercises/assignment3_particle/`
+
+## Features
+
+### Environments
+- Grid World: Discrete state space for Bayes filter
+- Continuous World: Continuous state space for EKF
+- MultiModal World: Complex environment for particle filter
+
+### Visualization Tools
+- Real-time belief state visualization
+- Trajectory plotting
+- Uncertainty visualization
+- Performance analysis tools
+
+## Installation
+
+Each assignment has its own dependencies. Install the one you're working on:
+
+```bash
+# For Assignment 1: Bayes Filter
+pip install -e ".[assignment1]"
+
+# For Assignment 2: Extended Kalman Filter
+pip install -e ".[assignment2]"
+
+# For Assignment 3: Particle Filter
+pip install -e ".[assignment3]"
+```
+
+## Repository Structure
+
+```
+filtering_exercises/
+├── assignment1_bayes/
+│   ├── bayes_filter.py
+│   ├── README.md
+│   └── writeup/
+├── assignment2_ekf/
+│   ├── extended_kalman_filter.py
+│   ├── README.md
+│   └── writeup/
+├── assignment3_particle/
+│   ├── particle_filter.py
+│   ├── README.md
+│   └── writeup/
+├── environments/
+│   ├── grid_world.py
+│   ├── continuous_world.py
+│   └── multimodal_world.py
+├── utils/
+│   ├── visualizer.py
+│   └── testing.py
+└── tests/
+    ├── test_bayes_filter.py
+    ├── test_extended_kalman_filter.py
+    └── test_particle_filter.py
+```
+
+## Development
+
+For development work:
+
+```bash
+# Install development dependencies
+pip install -e ".[dev]"
+
+# Run tests
+pytest tests/
+
+# Format code
+black .
+
+# Run linter
+flake8
+```
+
+## Documentation
+
+Each assignment includes:
+- Detailed README with implementation instructions
+- LaTeX writeup with theoretical background
+- Example code and test cases
+- Visualization guides
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details. 
