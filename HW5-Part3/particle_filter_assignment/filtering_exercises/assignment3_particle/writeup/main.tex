@@ -25,7 +25,7 @@ The particle filter's evolution was visualized using the provided visualization 
     \item \textbf{Post-Resampling}: High-weight particles are replicated, reducing variance but maintaining diversity.
     \item \textbf{Converged State}: After several iterations, particles converge to a tight cluster around the true robot pose, indicating successful localization.
 \end{itemize}
-These screenshots are included in \texttt{written\_answers.pdf} and demonstrate the filter's ability to handle multimodal distributions by maintaining particles in multiple high-likelihood regions before converging.
+% These screenshots are included in \texttt{written\_answers.pdf} and demonstrate the filter's ability to handle multimodal distributions by maintaining particles in multiple high-likelihood regions before converging.
 
 \subsection{Analysis of How Particle Count Affects Performance}
 The effect of particle count was studied by running the particle filter with varying numbers of particles (50, 100, 200, 500, 1000, 2000). Key findings:
@@ -33,7 +33,7 @@ The effect of particle count was studied by running the particle filter with var
     \item \textbf{Minimum Particle Count}: Below 100 particles, the filter fails to localize reliably. With fewer particles, the filter cannot adequately represent multimodal distributions, leading to particle depletion and divergence from the true state.
     \item \textbf{Large Particle Counts}: Using 1000 or more particles ensures robust localization but significantly increases computational cost. For this task, 1000 particles require excessive processing time (e.g., >0.5 seconds per update on standard hardware), making real-time implementation challenging. Additionally, large particle counts can lead to overfitting to noise in the measurement model, reducing adaptability to dynamic changes.
 \end{enumerate}
-A particle count of 200--500 was found to balance accuracy and efficiency, as detailed in \texttt{written\_answers.pdf}.
+% A particle count of 200--500 was found to balance accuracy and efficiency, as detailed in \texttt{written\_answers.pdf}.
 
 \subsection{Discussion of Resampling Strategy Effectiveness}
 The implemented low-variance resampling strategy was effective in maintaining particle diversity while focusing on high-likelihood regions. Key observations:
@@ -42,7 +42,7 @@ The implemented low-variance resampling strategy was effective in maintaining pa
     \item \textbf{Limitations}: In scenarios with highly multimodal distributions, resampling can still lead to loss of particles in low-weight but potentially correct modes. Adaptive resampling (triggered when effective particle count drops below a threshold) could further improve performance but was not implemented due to computational constraints.
     \item \textbf{Evaluation}: The resampling step successfully maintained an effective particle count above 50\% of the total in most test cases, ensuring robust localization.
 \end{itemize}
-Results and visualizations are included in \texttt{written\_answers.pdf}.
+% Results and visualizations are included in \texttt{written\_answers.pdf}.
 
 \subsection{Comparison with EKF in Multimodal Scenarios}
 The particle filter was compared to an Extended Kalman Filter (EKF) in handling multimodal scenarios:
@@ -51,7 +51,7 @@ The particle filter was compared to an Extended Kalman Filter (EKF) in handling 
     \item \textbf{EKF Limitations}: The EKF assumes a unimodal Gaussian distribution, which fails in multimodal cases. In the same test scenarios, the EKF often converged to an incorrect pose due to its inability to represent multiple hypotheses.
     \item \textbf{Trade-offs}: The particle filter is computationally more expensive than the EKF, especially with high particle counts. However, its robustness in complex environments justifies its use for this task.
 \end{itemize}
-A detailed comparison, including localization error plots, is provided in \texttt{written\_answers.pdf}.
+% A detailed comparison, including localization error plots, is provided in \texttt{written\_answers.pdf}.
 
 \subsection{Investigation of Particle Depletion Problems and Solutions}
 Particle depletion occurs when most particles have negligible weights, reducing the effective particle count and risking divergence. Observed issues and solutions:
