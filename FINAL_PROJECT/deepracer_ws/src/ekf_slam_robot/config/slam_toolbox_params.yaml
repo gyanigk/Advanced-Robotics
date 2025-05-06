@@ -1,0 +1,48 @@
+slam_toolbox:
+  ros__parameters:
+    # Robot frame setup
+    map_frame: map
+    odom_frame: odom
+    base_frame: base_link
+    scan_topic: /scan
+    
+    # SLAM algorithm parameters
+    mode: mapping
+    
+    # SLAM performance tuning
+    map_update_interval: 0.1  # How often to update the map (seconds)
+    resolution: 0.1  # Map resolution in meters
+    max_laser_range: 8.0  # Maximum range to use from the laser
+    minimum_time_interval: 0.1  # Minimum time between scans to process
+    transform_timeout: 0.01  # TF lookup timeout
+    tf_buffer_duration: 10.  # TF buffer size in seconds
+    stack_size_to_use: 40000000  # Stack size for the SLAM thread
+    
+    # Scan matcher parameters
+    use_scan_matching: true  # Enable scan matching
+    use_scan_barycenter: true  # Use scan barycenter for better matching
+    scan_matcher_type: CSM  # Correlative Scan Matcher
+    
+    # Loop closure parameters
+    enable_interactive_mode: false  # Don't use interactive mode for a robot
+    
+    # Solver parameters (Ceres is the backend optimizer)
+    solver_plugin: solver_plugins::CeresSolver
+    ceres_linear_solver: SPARSE_NORMAL_CHOLESKY
+    ceres_preconditioner: SCHUR_JACOBI
+    ceres_trust_strategy: LEVENBERG_MARQUARDT
+    ceres_dogleg_type: TRADITIONAL_DOGLEG
+    ceres_loss_function: None
+    
+    # Registration parameters for loop closure
+    loop_search_space_dimension: 6.0  # Size of the search space for loop closures
+    loop_match_minimum_chain_size: 3  # Minimum length of loop to close
+    loop_match_maximum_variance_covariance: 3.0  # Max variance for loop closure
+    
+    # Odometry integration
+    odom_topic: /odom  # Topic for odometry
+    use_pose_extrapolator: true  # Don't extrapolate odometry
+    
+    # Map update conditions - when to update the map
+    map_update_angle: 0.01  # Update map when robot rotates this much (radians)
+    map_update_distance: 0.05  # Update map when robot moves this far (meters)
